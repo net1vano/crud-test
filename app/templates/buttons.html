@@ -1,0 +1,22 @@
+{% extends "index.html" %}
+{% block content %}
+<form action="" method="POST" novalidate>
+  <p>
+    {{ form.button_get(size=32)}}
+  </p>
+
+<form action="" method="GET" novalidate>
+  <p>
+    {{ form.button_read(size=32)}}
+  </p>
+
+  <form action="" method="PUT" novalidate>
+  <p>
+    {{ form.button_update(size=32)}}
+  </p>
+
+    <form action="" method="DELETE" novalidate>
+  <p>
+    {{ form.button_delete(size=32)}}
+  </p>
+{% endblock %}
