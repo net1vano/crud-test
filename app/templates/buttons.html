@@ -1,22 +1,29 @@
 {% extends "index.html" %}
 {% block content %}
-<form action="" method="POST" novalidate>
+<form action="/request" >
+<p>
+    {{ buttons.uid.label }}
+    {{ buttons.uid }}
+</p>
+<form method="POST">
   <p>
-    {{ form.button_get(size=32)}}
+      {{ buttons.create(size=32)}}
   </p>
 
-<form action="" method="GET" novalidate>
+<form method="GET">
   <p>
-    {{ form.button_read(size=32)}}
+      {{ buttons.read(size=32)}}
   </p>
 
-  <form action="" method="PUT" novalidate>
+  <form method="POST" >
   <p>
-    {{ form.button_update(size=32)}}
+      {{ buttons.update(size=32)}}
   </p>
 
-    <form action="" method="DELETE" novalidate>
+    <form method="POST">
   <p>
-    {{ form.button_delete(size=32)}}
+      {{ buttons.delete(size=32)}}
   </p>
+    </form>
+      </form>
 {% endblock %}

@@ -3,8 +3,9 @@ from wtforms import TextAreaField, BooleanField, SubmitField
 from wtforms.validators import DataRequired
 
 
-class ButtonForm(FlaskForm):
-  button_get = SubmitField('GET')
-  button_read = SubmitField('READ')
-  button_update = SubmitField('UPDATE')
-  button_delete = SubmitField('DELETE')
+class Buttons(FlaskForm):
+  uid = TextAreaField('Input id')
+  create = SubmitField('POST')
+  read = SubmitField('GET')
+  update = SubmitField('UPDATE')
+  delete = SubmitField('DELETE')
