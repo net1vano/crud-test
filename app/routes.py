@@ -5,14 +5,16 @@ from app import app
 from app.forms import *
 from pymongo import MongoClient
 
-from flask_cors import CORS
-CORS(app, resources={r"/api/*": {"origins": "http://127.0.0.1:5000/"}})
-print(CORS)
+post = {
+    "author": "Mike",
+    "text": "My first blog post!",
+    "tags": ["mongodb", "python", "pymongo"],
+    "date": "time"
+}
+
+client = MongoClient("mongodb://127.0.0.1:27017/")
 
 
-client = MongoClient('localhost', 27017)
-db = client.flask_db
-todos = db.todos
 
 @app.route('/')
 @app.route('/index', methods=["GET", "POST"])
